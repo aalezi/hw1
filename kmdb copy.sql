@@ -111,14 +111,12 @@
 .headers off
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
--- TODO!
 DROP TABLE IF EXISTS ensembles;
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS studios;
 
 -- Create new tables, according to your domain model
--- TODO!
 CREATE TABLE studios (
     id INTEGER PRIMARY KEY,
     name TEXT
@@ -147,9 +145,10 @@ CREATE TABLE ensembles (
     FOREIGN KEY(actor_id) REFERENCES actors(id)
 );
 
+
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
--- TODO!
+
 -- studios
 INSERT INTO studios (id, name)
 VALUES (1, 'Warner Bros.');
@@ -200,13 +199,13 @@ VALUES
     (14, 3, 10, 'John Blake'),
     (15, 3, 11, 'Selina Kyle');
 
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
 .print ""
 
 -- The SQL statement for the movies output
--- TODO!
 SELECT m.title,
        m.year_released,
        m.rating,
@@ -223,7 +222,6 @@ JOIN studios s
 
 
 -- The SQL statement for the cast output
--- TODO!
 SELECT m.title,
        a.name,
        e.character_name
