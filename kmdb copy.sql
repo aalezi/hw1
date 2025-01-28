@@ -225,7 +225,7 @@ JOIN studios s
 SELECT m.title,
        a.name,
        e.character_name
-FROM ensemble e
+FROM ensembles e
 JOIN actors a
   ON e.actor_id = a.id
 JOIN movies m
